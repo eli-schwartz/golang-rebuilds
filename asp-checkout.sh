@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 
 mkdir -p asp
-pushd asp
-for pkg in $(cat ../packages); do
-	asp checkout $pkg
-done
+cd asp
+
+while read -r pkg; do
+	asp checkout "$pkg"
+done < ../packages
