@@ -4,5 +4,5 @@ mkdir -p asp
 cd asp
 
 while read -r pkg; do
-	asp checkout "$pkg"
+	asp export "$pkg"
 done < ../packages
